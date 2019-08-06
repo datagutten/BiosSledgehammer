@@ -1,0 +1,21 @@
+# BIOS Update ProDesk 400 G4 DM (Q23 Family)
+
+#The BIOS version the device should be on
+Version == 02.08.00
+
+# Command to be executed for the BIOS update
+Command == HpFirmwareUpdRec64.exe
+
+# Arguments passed to COMMAND
+
+# Silent
+Arg1 == -s
+
+# Do not restart automatically
+Arg2 == -r
+
+# Disable/Suspend BitLocker during upgrade
+Arg3 == -b
+
+# Password file (will be removed if no password is used)
+Arg4 == -p"@@PASSWORD_FILE@@"
